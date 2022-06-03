@@ -66,7 +66,7 @@ class App extends Component {
                 </Fragment>
               } />
               <Route exact path='/about' element={<About />} />
-              <Route exact path='/user/:login'
+              <Route exact path='/user/:loginname'
                 element={<User getUser={this.getUser}
                   getUserRepos={this.getUserRepos}
                   user={user}
