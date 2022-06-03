@@ -13,7 +13,7 @@ const Search =({showClear,clearUsers,clearAlert,setAlert,searchUsers})=> {
     const onSubmit = (e) => {
         e.preventDefault();
         if (text === '') {
-            setAlert("Please enter something", 'light');
+            setAlert("Please enter something");
           } else {
             searchUsers(text);
             setText('');
@@ -27,7 +27,7 @@ const Search =({showClear,clearUsers,clearAlert,setAlert,searchUsers})=> {
                 <input type="text" name="text" onChange={onChange} placeholder="Search Users..." value={text} />
                 <input type="submit" value="Search" className="btn btn-dark btn-block" />
             </form>
-            {showClear &&<button className="btn btn-light btn-block" onClick={clearUsers}>Clear</button>}
+            {showClear && <button className="btn btn-light btn-block" onClick={() => { clearUsers(); clearAlert()}}>Clear</button>}
       </div>
     )
 }
