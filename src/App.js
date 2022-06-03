@@ -7,6 +7,7 @@ import User from './Components/Users/User'
 import Search from './Components/Users/Search'
 import Alert from './Components/Layout/Alert'
 import About from './Components/Pages/About'
+import PageNotFound from './Components/Pages/PageNotFound'
 import GithubState from './Context/Github/GithubState'
 import AlertState from './Context/Alert/AlertState';
 const App=()=> {
@@ -27,7 +28,8 @@ const App=()=> {
                 </Fragment>
               } />
               <Route exact path='/about' element={<About />} />
-              <Route exact path='/user/:loginname' element={<User/>} />
+                <Route exact path='/user/:loginname' element={<User />} />
+                <Route path='*' element={<PageNotFound/>}/>
             </Routes>
           
         </div>
