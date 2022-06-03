@@ -8,10 +8,12 @@ import Search from './Components/Users/Search'
 import Alert from './Components/Layout/Alert'
 import About from './Components/Pages/About'
 import GithubState from './Context/Github/GithubState'
+import AlertState from './Context/Alert/AlertState';
 const App=()=> {
 
   return (
-      <GithubState>
+    <GithubState>
+      <AlertState>
       <Router>
       <div className="App">
         <Navbar title="Github Finder" icon="fa-regular fa-user" />
@@ -30,7 +32,8 @@ const App=()=> {
           
         </div>
         </div>
-      </Router>
+        </Router>
+        </AlertState>
       </GithubState>
     );
 }

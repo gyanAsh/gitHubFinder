@@ -3,9 +3,7 @@ import {
     GET_USER,
     CLEAR_USERS,
     GET_REPOS,
-    SET_LOADING,
-    SET_ALERT,
-    REMOVE_ALERT
+    SET_LOADING
 } from '../Types';
 
 const Reducer = (state, action) => {
@@ -28,16 +26,6 @@ const Reducer = (state, action) => {
                 ...state,
                 users: [],
                 loading:false
-            }
-        case SET_ALERT:
-            return {
-                ...state,
-                alert: action.payload,
-            }
-        case REMOVE_ALERT:
-            return {
-                ...state,
-                alert:null
             }
         case GET_USER:
             return {
