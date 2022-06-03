@@ -1,11 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import RepoItems from './RepoItem'
-import PropTypes from 'prop-types';
+import GithubContext from '../../Context/Github/GithubContext'
 
-const Repos = ({repos}) => {
-  return repos.map(repo=> <RepoItems key={repo.id} repo = {repo}/>)
+const Repos = () => {
+  const githubContext = useContext(GithubContext);
+  return githubContext.repos.map(repo=> <RepoItems key={repo.id} repo = {repo}/>)
 }
-Repos.propTypes = {
-    repos: PropTypes.array.isRequired,
-}
+
 export default Repos;
